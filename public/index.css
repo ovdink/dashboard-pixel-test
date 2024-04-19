@@ -1,28 +1,12 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/public/fonts/Inter-Medium.ttf') format('truetype');
-    font-weight: 500;
+    font-family: 'PixelSans';
+    src: url('/public/fonts/pixelsans.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/public/fonts/Inter-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-medium.ttf') format('truetype');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-SemiBold.ttf') format('truetype');
-    font-weight: 600;
+    font-family: 'PixelMix';
+    src: url('/public/fonts/pixelmix.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -34,7 +18,7 @@
     -webkit-tap-highlight-color: transparent;
 
     transition: background-color 0.15s ease-in-out;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'PixelSans', sans-serif;
 
     scrollbar-color: #d1e4f6 white;
     scrollbar-width: thin;
@@ -48,8 +32,6 @@ body,
 
 body {
     margin: 0;
-
-    font-family: 'Inter', sans-serif;
 
     background-color: #090a17;
 
