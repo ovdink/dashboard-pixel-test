@@ -1,17 +1,16 @@
 import * as STYLE from '../units';
 
-import { LeftBlock } from './modules';
+import { LeftBlock, RightSide } from './modules';
+import * as S from './units';
 
 export const MainPage = () => {
     return (
         <STYLE.PageWrapper>
-            {/* test font */}
-            {/* <h1 style={{ color: 'white' }}>Invite friends and earn more points</h1>
-            <h1 style={{ fontFamily: 'PixelMix', color: 'white' }}>
-                Invite friends and earn more points
-            </h1> */}
+            <S.Content>
+                <LeftBlock />
 
-            <LeftBlock />
+                <RightSide />
+            </S.Content>
         </STYLE.PageWrapper>
     );
 };

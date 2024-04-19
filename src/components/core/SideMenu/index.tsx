@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { ReactComponent as CoinSVG } from './images/coin.svg';
 import { ReactComponent as DiscordSVG } from './images/discord.svg';
@@ -16,7 +16,7 @@ import * as S from './units';
 export const navigationItemList = [
     {
         label: 'Profile',
-        url: '/profile',
+        url: '/',
         icon: <PersonSVG />,
     },
     {
@@ -50,19 +50,18 @@ export const navigationItemList = [
 ];
 
 export const SideMenu = () => {
-    const [activeItem, setActiveItem] = useState(0);
+    const location = useLocation();
 
     return (
         <S.Container>
-            <S.Logo src={logo} onClick={() => location.reload()} />
+            <S.Logo src={logo} onClick={() => window.location.reload()} />
 
             <S.NavigationBlock>
                 {navigationItemList.map((navigationItem, index) => (
                     <S.NavigationItem
                         key={index}
                         to={navigationItem.url}
-                        isActive={activeItem === index}
-                        onClick={() => setActiveItem(index)}
+                        isActive={location.pathname === navigationItem.url}
                         isWrongSVG={navigationItem.isWrongSVG}
                     >
                         {navigationItem.icon}

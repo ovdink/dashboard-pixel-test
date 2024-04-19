@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { theme } from 'styles';
+import { theme, toEnd } from 'styles';
 
 import itemTemplate from './images/item-hover-template.png';
 import template from './images/sidebar-template.png';
@@ -17,12 +17,17 @@ export const Container = styled.nav`
     align-items: center;
 
     width: 246px;
+    min-width: 246px;
     height: 762px;
     padding: 40px 12px 32px 20px;
 
     background-image: url(${template});
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    ${toEnd('mobile')} {
+        display: none;
+    }
 `;
 
 export const Logo = styled.img`

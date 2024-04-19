@@ -5,7 +5,3 @@ declare global {
         _environment: TEnvironment;
     }
 }
-
-type TEnvironment = {
-    API_URL: string;
-};

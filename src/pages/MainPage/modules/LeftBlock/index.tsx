@@ -1,13 +1,16 @@
 import { BorderBox } from 'components/containers';
 import { CopyBlock } from 'components/interactions';
 
+import { useWindowResize } from 'hooks';
 import { theme } from 'styles';
 
 import * as S from './units';
 
 export const LeftBlock = () => {
+    const width = useWindowResize();
+
     return (
-        <BorderBox borderColor={theme.colors.dark} maxWidth={557}>
+        <BorderBox borderColor={theme.colors.dark} maxWidth={width > 1200 ? 557 : undefined}>
             <S.Content>
                 <S.Title>Invite Friends And Earn More Points</S.Title>
 

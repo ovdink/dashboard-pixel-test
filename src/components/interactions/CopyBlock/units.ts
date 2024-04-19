@@ -33,10 +33,13 @@ export const Text = styled.p`
     color: ${theme.colors.white};
 
     font-family: 'IBM Plex Mono';
-    white-space: nowrap;
+    word-break: break-all;
 
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 
     ${toEnd('mobile')} {
         font-size: 14px;

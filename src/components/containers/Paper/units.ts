@@ -14,5 +14,5 @@ export const Paper = styled.div<IPaper>`
     padding: 24px;
 
     background-color: ${theme.colors.lightGray};
-    border-radius: ${({ isRounded }) => (isRounded ? theme.borderRadiusPrimary : 0)};
+    border-radius: ${({ isRounded }) => (isRounded ? '16px' : 0)};
 `;

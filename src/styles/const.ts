@@ -1,8 +1,5 @@
 export const theme = {
-    borderRadiusPrimary: '',
-    borderRadiusSecondary: '',
-
-    maxContentWidth: '1082px', // change
+    maxContentWidth: '1082px',
 
     text: {
         superTiny: {
@@ -28,10 +25,6 @@ export const theme = {
         },
     },
 
-    fonts: {
-        gilroy: 'Gilroy', // change
-    },
-
     zIndex: {
         upperElement: 10,
         menu: 20,
@@ -49,8 +42,6 @@ export const theme = {
         lightGray: '#474756',
         darkGray: '#232330',
         purple: '#B364D8',
-        darkPurple: '#B364D8',
         green: '#83D987',
-        darkGreen: '#69AE6C',
     },
 };
