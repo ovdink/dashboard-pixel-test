@@ -5,4 +5,6 @@ export interface IBorderBox {
 
     borderColor?: string;
     size?: number;
+
+    maxWidth?: number;
 }

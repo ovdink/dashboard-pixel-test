@@ -7,7 +7,8 @@ import * as T from './types';
 export const Container = styled.div<T.IBorderBox>`
     position: relative;
 
-    width: max-content;
+    width: 100%;
+    max-width: ${({ maxWidth }) => (!!maxWidth ? `${maxWidth}px` : '100%')};
     padding: ${({ size = 3 }) => `${size}px`};
 `;
 
