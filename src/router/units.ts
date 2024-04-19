@@ -2,16 +2,20 @@ import styled from '@emotion/styled';
 
 import { toEnd } from 'styles';
 
+import backgroundMask from 'images/background-mask.png';
+
 export const MainWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    min-height: 100%;
     width: 100%;
-    padding: 8px 16px;
+    height: 100%;
+    min-height: 100vh;
 
-    background: grey;
+    background-image: url(${backgroundMask});
+    background-position: 50%;
+    background-size: cover;
 
     ${toEnd('mobile')} {
         padding: 4px 8px 8px;

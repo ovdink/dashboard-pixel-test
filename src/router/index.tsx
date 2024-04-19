@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Footer } from 'components/core';
-
 import * as PAGES from 'pages';
 
 import * as C from './const';
@@ -16,8 +14,6 @@ export const NavigationRouter = () => {
 
                     <Route path="*" element={<div>No found page</div>} />
                 </Routes>
-
-                <Footer />
             </S.MainWrapper>
         </Router>
     );
