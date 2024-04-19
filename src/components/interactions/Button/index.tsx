@@ -1,5 +1,4 @@
 import { FC, forwardRef } from 'react';
-import { observer } from 'mobx-react';
 
 import { Loader } from 'components/core';
 
@@ -22,7 +21,7 @@ export const Button = forwardRef<HTMLButtonElement, T.IButton>((props, ref) => {
     );
 });
 
-export const CircleButton: FC<T.ICircleButton> = observer((props) => {
+export const CircleButton: FC<T.ICircleButton> = (props) => {
     return (
         <S.CircleButton {...props}>
             {props.isLoading ? (
@@ -36,4 +35,4 @@ export const CircleButton: FC<T.ICircleButton> = observer((props) => {
             )}
         </S.CircleButton>
     );
-});
+};

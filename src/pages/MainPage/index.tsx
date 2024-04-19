@@ -1,7 +1,5 @@
-import { observer } from 'mobx-react';
-
 import * as STYLE from '../units';
 
-export const MainPage = observer(() => {
+export const MainPage = () => {
     return <STYLE.PageWrapper>TEST</STYLE.PageWrapper>;
-});
+};
