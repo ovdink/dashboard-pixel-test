@@ -13,6 +13,6 @@ export const Paper = styled.div<IPaper>`
     width: 100%;
     padding: 24px;
 
-    background-color: ${theme.colors.box7};
+    background-color: ${theme.colors.lightGray};
     border-radius: ${({ isRounded }) => (isRounded ? theme.borderRadiusPrimary : 0)};
 `;

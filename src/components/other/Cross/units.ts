@@ -31,7 +31,7 @@ export const IconWrapper = styled.div<{ size?: 'small' | 'normal' }>`
 
     @media (hover: hover) {
         &:hover {
-            background-color: ${theme.colors.box24};
+            background-color: ${theme.colors.gray};
         }
     }
 `;
