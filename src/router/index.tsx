@@ -10,9 +10,9 @@ import * as S from './units';
 export const NavigationRouter = () => {
     return (
         <Router>
-            <SideMenu />
-
             <S.MainWrapper>
+                <SideMenu />
+
                 <Routes>
                     <Route path={C.MAIN_PAGE} element={<PAGES.MainPage />} />
 
