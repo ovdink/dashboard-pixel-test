@@ -1,2 +1,2 @@
 export { BorderBox } from './BorderBox';
-export { Paper } from './Paper';
+export { Modal } from './Modal';
