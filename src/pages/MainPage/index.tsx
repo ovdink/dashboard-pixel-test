@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-import { Button } from 'components/interactions';
+import { Dropdown } from 'components/interactions';
 
+// import { Button } from 'components/interactions';
 import * as STYLE from '../units';
 
 import { WalletsModal } from './modules/WalletsModal';
@@ -13,7 +14,8 @@ export const MainPage = () => {
 
     return (
         <STYLE.PageWrapper>
-            <Button onClick={() => setVisibleModal(true)} />
+            {/* <Button onClick={() => setVisibleModal(true)}>Connect Wallet</Button> */}
+            <Dropdown wallet="0xBc18...46B9" />
 
             <S.Content>
                 <LeftBlock />
