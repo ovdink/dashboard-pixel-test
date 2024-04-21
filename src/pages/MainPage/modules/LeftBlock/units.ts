@@ -75,15 +75,6 @@ export const CopyBlock = styled.div`
     }
 `;
 
-export const CopyText = styled.p`
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 23.22px;
-    color: ${theme.colors.white};
-
-    font-family: 'IBM Plex Mono';
-`;
-
 export const Description = styled.p`
     font-size: 16px;
     font-weight: 400;

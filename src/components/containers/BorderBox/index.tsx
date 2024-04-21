@@ -5,7 +5,7 @@ import * as S from './units';
 
 export const BorderBox: FC<T.IBorderBox> = ({ children, ...props }) => {
     return (
-        <S.Container maxWidth={props.maxWidth}>
+        <S.Container {...props}>
             <S.Top {...props} />
             <S.Right {...props} />
             <S.Bottom {...props} />
