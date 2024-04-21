@@ -1,0 +1,1 @@
+export { getTailsString } from './getTailsString';

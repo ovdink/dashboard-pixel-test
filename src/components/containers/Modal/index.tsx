@@ -2,6 +2,11 @@ import { FC, MouseEvent, MutableRefObject, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
 import { useBlockBodyScroll } from 'hooks';
+import { theme } from 'styles';
+
+import { BorderBox } from '../BorderBox';
+
+import crossIcon from './images/cross-icon.svg';
 
 import { IModalProps } from './types';
 import * as S from './units';
@@ -19,7 +24,6 @@ export const Modal: FC<IModalProps> = ({ title, isBodyScrollBlocked = true, ...p
         }
     };
 
-    // @ts-ignore
     const onCloseCrossHandler = () => {
         !!props.setVisible && props.setVisible(false);
 
@@ -28,7 +32,13 @@ export const Modal: FC<IModalProps> = ({ title, isBodyScrollBlocked = true, ...p
 
     return ReactDOM.createPortal(
         <S.ModalOverlay onMouseDown={onCloseModalHandler} isVisible={props.isVisible} {...{ ref }}>
-            <div></div>
+            <BorderBox maxWidth={832} size={6} borderColor={theme.colors.darkGray}>
+                <S.ModalPaper>
+                    {props.children}
+
+                    <S.CrossIcon src={crossIcon} onClick={onCloseCrossHandler} />
+                </S.ModalPaper>
+            </BorderBox>
         </S.ModalOverlay>,
         document.getElementById('modal-root') as Element,
     );

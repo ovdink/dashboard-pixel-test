@@ -37,19 +37,42 @@ export const ModalOverlay = styled.div<IModalOverlayProps>`
     }
 `;
 
-export const TitleWrapper = styled.div`
-    position: sticky;
-    top: 0;
-    left: 0;
+export const ModalPaper = styled.div<IModalOverlayProps>`
+    position: relative;
 
-    display: flex;
+    display: inline-block;
+    vertical-align: top;
 
-    width: calc(100% + 48px);
-    padding: 24px 24px 16px;
+    width: 100%;
+    max-height: calc(100% - 100px);
+    padding: 24px 26px 34px;
 
-    transform: translateX(-24px);
+    background-color: ${theme.colors.dark};
 
-    background-color: black;
+    overflow: hidden auto;
 
-    z-index: ${theme.zIndex.menu};
+    cursor: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-top: 65px;
+        margin-bottom: 80px;
+    }
+`;
+
+export const CrossIcon = styled.img`
+    position: absolute;
+    top: 24px;
+    right: 26px;
+
+    cursor: pointer;
+
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `;

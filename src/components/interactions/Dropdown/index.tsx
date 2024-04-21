@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { useDisconnect } from 'wagmi';
 
 import { Button } from '../Button';
 
@@ -8,6 +9,8 @@ import { IDropdown } from './types';
 import * as S from './units';
 
 export const Dropdown: FC<IDropdown> = (props) => {
+    const { disconnect } = useDisconnect();
+
     const [isOpen, setOpen] = useState(false);
 
     return (
@@ -29,7 +32,7 @@ export const Dropdown: FC<IDropdown> = (props) => {
                     <S.JustText>{props.wallet}</S.JustText>
                 </S.LineBlock>
 
-                <S.Button src={button} />
+                <S.Button src={button} onClick={() => disconnect()} />
             </S.Dropdown>
         </S.Container>
     );

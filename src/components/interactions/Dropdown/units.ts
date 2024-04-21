@@ -28,7 +28,7 @@ export const Dropdown = styled.div<{ isOpen: boolean }>`
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    z-index: 10;
+    z-index: ${theme.zIndex.dropdown};
 `;
 
 export const ArrowIcon = styled(ArrowSVG)<{ isOpen: boolean }>`

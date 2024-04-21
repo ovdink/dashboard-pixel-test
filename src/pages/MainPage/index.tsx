@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useAccount } from 'wagmi';
 
-import { Dropdown } from 'components/interactions';
+import { Button, Dropdown } from 'components/interactions';
 
-// import { Button } from 'components/interactions';
+import { getTailsString } from 'utils';
+
 import * as STYLE from '../units';
 
 import { WalletsModal } from './modules/WalletsModal';
@@ -12,10 +14,15 @@ import * as S from './units';
 export const MainPage = () => {
     const [isVisibleModal, setVisibleModal] = useState(false);
 
+    const { isConnected, address } = useAccount();
+
     return (
         <STYLE.PageWrapper>
-            {/* <Button onClick={() => setVisibleModal(true)}>Connect Wallet</Button> */}
-            <Dropdown wallet="0xBc18...46B9" />
+            {isConnected ? (
+                <Dropdown wallet={getTailsString(address)} />
+            ) : (
+                <Button onClick={() => setVisibleModal(true)}>Connect Wallet</Button>
+            )}
 
             <S.Content>
                 <LeftBlock />
