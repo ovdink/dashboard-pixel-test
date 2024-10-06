@@ -20,4 +20,5 @@ export const Container = styled.div`
     gap: 16px;
 
     width: 100%;
+    height: 40px;
 `;
