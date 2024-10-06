@@ -15,10 +15,10 @@ export const PageWrapper = styled.div`
     overflow: hidden;
 `;
 
-export const Container = styled.div`
-    display: flex;
-    gap: 16px;
+// export const Container = styled.div`
+//     display: flex;
+//     gap: 16px;
 
-    width: 100%;
-    height: 40px;
-`;
+//     width: 100%;
+//     height: 40px;
+// `;
