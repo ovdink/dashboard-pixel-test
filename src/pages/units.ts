@@ -17,7 +17,7 @@ export const PageWrapper = styled.div`
 
 export const Container = styled.div`
     display: flex;
-    gap: 16px;
+    gap: 8px;
 
     width: 100%;
     height: 40px;
